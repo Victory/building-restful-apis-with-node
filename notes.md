@@ -5,7 +5,7 @@ Issues and Notes
 ===
 
 
-** part 1 **
+**part 1**
 
 - Required version of `npm` not mentioned, The following don't work
 
@@ -41,4 +41,4 @@ The following do
 
     sudo npm install -g node-inspector
 
-** part 2 **
+**part 2**
