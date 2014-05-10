@@ -1,9 +1,11 @@
 http://scottksmith.com/blog/2014/05/02/building-restful-apis-with-node/
 
 
-* Issues and Notes
+Issues and Notes
+===
 
-  https://accounts.google.com/o/oauth2/postmessageRelay
+
+** part 1 **
 
 - Required version of `npm` not mentioned, The following don't work
 
@@ -38,3 +40,5 @@ The following do
   installed with out `-g`
 
     sudo npm install -g node-inspector
+
+** part 2 **
