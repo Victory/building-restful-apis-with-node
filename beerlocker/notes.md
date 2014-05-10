@@ -1,10 +1,17 @@
+http://scottksmith.com/blog/2014/05/02/building-restful-apis-with-node/
 
-* Issues
-- Required version of `npm` not mentioned, The following don't work 
+
+* Issues and Notes
+
+  https://accounts.google.com/o/oauth2/postmessageRelay
+
+- Required version of `npm` not mentioned, The following don't work
+
     npm 1.1.4
     node v0.6.12
 
 The following do
+
     npm - 1.4.9
     node - v0.10.28
 
@@ -22,3 +29,12 @@ The following do
            at listen (net.js:1064:10)
            at Server.listen (net.js:1138:5)
            ... snip ....
+
+- miss-spelled segue as "seque" (like I am one to talk, sheesh)
+
+- if you are passing the `-g` global switch to npm, chances are you
+  will need run as sudo, `node-inspector` throws a `WARN` if you
+  install locally. `node-debug server.js` didn't run for me when
+  installed with out `-g`
+
+    sudo npm install -g node-inspector
