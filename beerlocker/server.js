@@ -20,6 +20,38 @@ router.get('/', function(req, res) {
 });
 
 
+var beersRoute = router.route('/beers');
+
+// Create endpoint /api/beers for POSTS
+beersRoute.post(function(req, res) {
+
+  var beer = new Beer();
+  beer.name = req.body.name;
+  beer.type = req.body.type;
+  beer.quantity = req.body.quantity;
+
+  // validate and save
+  beer.save(function(err) {
+    if(err) {
+      req.send(err);
+    }
+
+    res.json({
+      message: 'Beer add to the locker!', 
+      data: beer
+    });
+  });
+});
+
+beersRoute.get(function(req, res) {
+  Beer.find(function(err, beers) {
+    if (err) {
+      res.send(err);
+    }
+    res.json(beers);
+  });
+});
+
 // '/api' is the base dir of the app
 app.use('/api', router);
 

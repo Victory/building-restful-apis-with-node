@@ -42,3 +42,10 @@ The following do
     sudo npm install -g node-inspector
 
 **part 2**
+
+- `node-debug server.js` and `node server.js` don't seem to know i
+  edited files. Would be good if it had something like django, which
+  noticed changes files and restarted the server.
+
+- not feeling like learning/installing `Postman`, created `curl`
+  scripts instead. I will circle back
