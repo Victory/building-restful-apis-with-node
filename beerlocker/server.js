@@ -64,6 +64,23 @@ beerRoute.get(function(req, res) {
   });
 });
 
+beerRoute.put(function(req, res) {
+  Beer.findById(req.params.beer_id, function(err, beer) {
+    if (err) {
+      res.send(err);
+    }
+
+    beer.quantity = req.body.quantity;
+
+    beer.save(function(err) {
+      if (err) {
+        res.send(err);
+      }
+      res.json(beer);
+    });
+  });
+});
+
 // '/api' is the base dir of the app
 app.use('/api', router);
 
