@@ -49,3 +49,7 @@ The following do
 
 - not feeling like learning/installing `Postman`, created `curl`
   scripts instead. I will circle back
+
+**part 3**
+
+- In part 3 we gut a bunch of code to move to a controller pattern
