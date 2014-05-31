@@ -2,6 +2,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var beerController = require('./controllers/beer');
+var userController = require('./controllers/user');
 
 mongoose.connect('mongodb://localhost:27017/beerlocker');
 
@@ -13,6 +14,10 @@ var port = process.env.PORT || 9000;
 
 // a sort of "mini app"
 var router = express.Router();
+
+router.route('/users')
+  .post(userController.postUsers)
+  .get(userController.getUsers);
 
 router.route('/beers')
   .post(beerController.postBeers)
