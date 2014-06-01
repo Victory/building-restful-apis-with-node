@@ -1,5 +1,5 @@
 var passport = require('passport');
-var BasicStrateg = require('passport-http').BasicStrategy;
+var BasicStrategy = require('passport-http').BasicStrategy;
 var User = require('../models/user');
 
 

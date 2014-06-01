@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var beerController = require('./controllers/beer');
 var userController = require('./controllers/user');
+var authController = require('./controllers/auth');
 
 mongoose.connect('mongodb://localhost:27017/beerlocker');
 
