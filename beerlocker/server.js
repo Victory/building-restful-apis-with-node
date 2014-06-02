@@ -18,16 +18,16 @@ var router = express.Router();
 
 router.route('/users')
   .post(userController.postUsers)
-  .get(userController.getUsers);
+  .get(authController.isAuthenticated, userController.getUsers);
 
 router.route('/beers')
-  .post(beerController.postBeers)
-  .get(beerController.getBeers);
+  .post(authController.isAuthenticated, beerController.postBeers)
+  .get(authController.isAuthenticated, beerController.getBeers);
 
 router.route('/beers/:beer_id')
-  .get(beerController.getBeer)
-  .put(beerController.putBeer)
-  .delete(beerController.deleteBeer);
+  .get(authController.isAuthenticated, beerController.getBeer)
+  .put(authController.isAuthenticated, beerController.putBeer)
+  .delete(authController.isAuthenticated, beerController.deleteBeer);
 
 // '/api' is the base dir of the app
 app.use('/api', router);
