@@ -53,3 +53,8 @@ The following do
 **part 3**
 
 - In part 3 we gut a bunch of code to move to a controller pattern
+
+- There is a particular order for out-of-order middleware issues, 
+    
+     Error: passport.initialize() middleware not in use
+
