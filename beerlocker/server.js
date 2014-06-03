@@ -1,6 +1,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var passport = require('passport');
 var authController = require('./controllers/auth');
 var beerController = require('./controllers/beer');
 var userController = require('./controllers/user');
@@ -11,6 +12,7 @@ mongoose.connect('mongodb://localhost:27017/beerlocker');
 var app = express();
 
 app.use(bodyParser());
+app.use(passport.initialize());
 
 var port = process.env.PORT || 9000;
 
